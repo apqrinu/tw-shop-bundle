@@ -1,0 +1,14 @@
+{
+    "name": {
+        "ar": "\u0645\u062c\u0645\u0648\u0639\u0629 \u062a\u0633\u0648\u0642",
+        "en": "shop bundle"
+    },
+    "description": {
+        "ar": "",
+        "en": ""
+    },
+    "author_email": "omar-mazen@apqrinu-admin.online",
+    "support_url": "",
+    "repository": "https://github.com/apqrinu/tw-shop-bundle",
+    "components": []
+}
