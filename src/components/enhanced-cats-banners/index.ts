@@ -1,5 +1,6 @@
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
+import { resolveText, type LocalizedText } from "../../utils/i18n.js";
 
 // ============================================
 // TYPES
@@ -7,12 +8,12 @@ import { property } from "lit/decorators.js";
 
 interface CardItem {
   image?: string;
-  badge?: string;
+  badge?: LocalizedText;
   badge_color?: string;
   badge_bg_color?: string;
-  title?: string;
+  title?: LocalizedText;
   title_color?: string;
-  btn_text?: string;
+  btn_text?: LocalizedText;
   btn_color?: string;
   btn_bg_color?: string;
   url?: string;
@@ -26,9 +27,9 @@ interface ComponentConfig {
   ns_in_container?: boolean;
   ns_margin_top_zero?: boolean;
 
-  ns_main_title?: string;
+  ns_main_title?: LocalizedText;
   ns_main_title_color?: string;
-  ns_main_subtitle?: string;
+  ns_main_subtitle?: LocalizedText;
   ns_main_subtitle_color?: string;
 
   ns_radius?: number | string;
@@ -404,7 +405,9 @@ export class EnhancedCatsBanners extends LitElement {
   private _renderCard(card: CardItem, index: number, anim: string, radius: number) {
     const pos = index + 1; // mirror Twig's 1-based loop.index
     const url = card.url || "#";
-    const title = card.title || "";
+    const title = resolveText(card.title);
+    const badge = resolveText(card.badge);
+    const btnText = resolveText(card.btn_text);
     const image =
       card.image || `https://placehold.co/800x800?text=Card+${pos}`;
     const delay = pos * 100 + 100;
@@ -425,13 +428,13 @@ export class EnhancedCatsBanners extends LitElement {
 
         <span class="ns-card__overlay"></span>
 
-        ${card.badge
+        ${badge
           ? html`
               <span
                 class="ns-card__badge"
                 style="color: ${card.badge_color || "#000"}; background-color: ${card.badge_bg_color || "#fff"};"
               >
-                ${card.badge}
+                ${badge}
               </span>
             `
           : ""}
@@ -447,13 +450,13 @@ export class EnhancedCatsBanners extends LitElement {
                 </h3>
               `
             : ""}
-          ${card.btn_text
+          ${btnText
             ? html`
                 <span
                   class="ns-card__btn"
                   style="color: ${card.btn_color || "#000"}; background-color: ${card.btn_bg_color || "#FFD93D"};"
                 >
-                  ${card.btn_text}
+                  ${btnText}
                 </span>
               `
             : ""}
@@ -480,9 +483,9 @@ export class EnhancedCatsBanners extends LitElement {
     const inContainer = cfg?.ns_in_container ?? true;
     const flushTop = !!cfg?.ns_margin_top_zero;
 
-    const mainTitle = cfg?.ns_main_title || "";
+    const mainTitle = resolveText(cfg?.ns_main_title);
     const mainTitleColor = cfg?.ns_main_title_color || "#000";
-    const mainSubtitle = cfg?.ns_main_subtitle || "";
+    const mainSubtitle = resolveText(cfg?.ns_main_subtitle);
     const mainSubtitleColor = cfg?.ns_main_subtitle_color || "#777";
 
     const radius = Number(cfg?.ns_radius ?? 16);

@@ -1,5 +1,6 @@
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
+import { resolveText, type LocalizedText } from "../../utils/i18n.js";
 
 // ============================================
 // TYPES
@@ -16,16 +17,16 @@ interface ComponentConfig {
   about_us_animate?: string;
 
   // Title
-  about_us_main_title?: string;
-  about_us_title?: string;
+  about_us_main_title?: LocalizedText;
+  about_us_title?: LocalizedText;
   about_us_title_color?: string;
 
   // Description
-  about_us_des?: string;
+  about_us_des?: LocalizedText;
   about_us_des_color?: string;
 
   // Button
-  about_us_btn?: string;
+  about_us_btn?: LocalizedText;
   about_us_btn_url?: string;
   about_us_btn_color?: string;
   about_us_btn_bg_color?: string;
@@ -295,7 +296,12 @@ export class AboutUs extends LitElement {
 
     const animateClass = cfg?.about_us_animate ?? "";
     const hasVideo = !!cfg?.about_us_video_s;
-    const hasBtn = !!cfg?.about_us_btn;
+
+    const mainTitle = resolveText(cfg?.about_us_main_title);
+    const title = resolveText(cfg?.about_us_title);
+    const des = resolveText(cfg?.about_us_des);
+    const btnText = resolveText(cfg?.about_us_btn);
+    const hasBtn = btnText !== "";
 
     const titleColor = cfg?.about_us_title_color || "#000";
     const desColor = cfg?.about_us_des_color || "#777";
@@ -325,24 +331,24 @@ export class AboutUs extends LitElement {
                       tabindex="0"
                     >
                       <source src="${cfg?.about_us_video ?? ""}" type="video/mp4" />
-                      <p>Your browser doesn't support HTML video.</p>
+                      <p>${resolveText({ ar: "متصفحك لا يدعم تشغيل الفيديو.", en: "Your browser doesn't support HTML video." })}</p>
                     </video>
                   `
                 : html`
                     <img
                       class="au-media au-media--image ${animateClass}"
                       src="${this._resolveImage()}"
-                      alt="${cfg?.about_us_main_title ?? ""}"
+                      alt="${mainTitle}"
                     />
                   `}
 
               <div class="au-content">
                 <div class="au-text-group">
                   <h2 class="au-title ${animateClass}" style="color: ${titleColor};">
-                    ${cfg?.about_us_title ?? ""}
+                    ${title}
                   </h2>
                   <p class="au-desc ${animateClass}" style="color: ${desColor};">
-                    ${cfg?.about_us_des ?? ""}
+                    ${des}
                   </p>
                 </div>
 
@@ -353,7 +359,7 @@ export class AboutUs extends LitElement {
                         class="au-btn ${animateClass}"
                         style="color: ${btnColor}; background-color: ${btnBgColor};"
                       >
-                        ${cfg?.about_us_btn}
+                        ${btnText}
                         <i class="${this.isRtl ? "sicon-arrow-left" : "sicon-arrow-right"}"></i>
                       </a>
                     `

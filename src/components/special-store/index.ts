@@ -1,5 +1,6 @@
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
+import { resolveText, type LocalizedText } from "../../utils/i18n.js";
 
 // ============================================
 // TYPES
@@ -8,9 +9,9 @@ import { property } from "lit/decorators.js";
 interface FeatureItem {
   icon?: string;
   image?: string;
-  title?: string;
+  title?: LocalizedText;
   title_color?: string;
-  des?: string;
+  des?: LocalizedText;
   des_color?: string;
   [key: string]: any;
 }
@@ -349,6 +350,8 @@ export class SpecialStore extends LitElement {
   private _renderFeature(feature: FeatureItem, index: number) {
     const titleColor = feature.title_color || "#000";
     const desColor = feature.des_color || "#777";
+    const title = resolveText(feature.title);
+    const des = resolveText(feature.des);
 
     return html`
       <div class="ss-item">
@@ -357,7 +360,7 @@ export class SpecialStore extends LitElement {
           style="${this._delayStyle(index, 100)}"
         >
           ${feature.image
-            ? html`<img src="${feature.image}" loading="lazy" alt="${feature.title ?? ""}" />`
+            ? html`<img src="${feature.image}" loading="lazy" alt="${title}" />`
             : html`<i class="${feature.icon ?? ""}"></i>`}
         </div>
         <div class="ss-item-content">
@@ -365,13 +368,13 @@ export class SpecialStore extends LitElement {
             class="ss-item-title fade-right"
             style="color: ${titleColor}; ${this._delayStyle(index, 200)}"
           >
-            ${feature.title ?? ""}
+            ${title}
           </h3>
           <p
             class="ss-item-des fade-right"
             style="color: ${desColor}; ${this._delayStyle(index, 300)}"
           >
-            ${feature.des ?? ""}
+            ${des}
           </p>
         </div>
       </div>
@@ -430,7 +433,7 @@ export class SpecialStore extends LitElement {
                           preload="metadata"
                         >
                           <source src="${videoUrl}" type="video/mp4" />
-                          <p>متصفحك لا يدعم تشغيل الفيديو.</p>
+                          <p>${resolveText({ ar: "متصفحك لا يدعم تشغيل الفيديو.", en: "Your browser doesn't support HTML video." })}</p>
                         </video>
                       `
                     : ""}

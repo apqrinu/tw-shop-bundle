@@ -1,5 +1,6 @@
 import { css, html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
+import { resolveText, type LocalizedText } from "../../utils/i18n.js";
 
 // ============================================
 // TYPES
@@ -26,12 +27,12 @@ interface LinkObject {
 interface CategoryItem {
   "t_category.image"?: string;
   "t_category.image_en"?: string;
-  "t_category.title"?: string;
+  "t_category.title"?: LocalizedText;
   "t_category.title_color"?: string;
-  "t_category.sub_title"?: string;
+  "t_category.sub_title"?: LocalizedText;
   "t_category.sub_title_color"?: string;
   "t_category.display_none_subtitle"?: boolean;
-  "t_category.btn_text"?: string;
+  "t_category.btn_text"?: LocalizedText;
   "t_category.btn_text_color"?: string;
   "t_category.btn_bg_color"?: string;
   "t_category.btn_link"?: string | LinkObject;
@@ -45,9 +46,9 @@ interface CategoryItem {
 interface ComponentConfig {
   put_section_in_container?: boolean;
 
-  enhanced_cat_1_main_title?: string;
+  enhanced_cat_1_main_title?: LocalizedText;
   enhanced_cat_1_main_title_color?: string;
-  enhanced_cat_1_main_subtitle?: string;
+  enhanced_cat_1_main_subtitle?: LocalizedText;
   enhanced_cat_1_main_subtitle_color?: string;
 
   t_category?: CategoryItem[];
@@ -487,13 +488,13 @@ export class SpecialCategories extends LitElement {
   private _renderItem(item: CategoryItem, index: number) {
     const image = this._get(item, "image") as string | undefined;
     const imageEn = this._get(item, "image_en") as string | undefined;
-    const title = this._get(item, "title") as string | undefined;
+    const title = resolveText(this._get(item, "title"));
     const titleColor = (this._get(item, "title_color") as string) || "#000000";
-    const subTitle = this._get(item, "sub_title") as string | undefined;
+    const subTitle = resolveText(this._get(item, "sub_title"));
     const subTitleColor =
       (this._get(item, "sub_title_color") as string) || "#000000";
     const hideSubtitleMobile = !!this._get(item, "display_none_subtitle");
-    const btnText = this._get(item, "btn_text") as string | undefined;
+    const btnText = resolveText(this._get(item, "btn_text"));
     const btnTextColor =
       (this._get(item, "btn_text_color") as string) || "#000000";
     const btnBgColor = (this._get(item, "btn_bg_color") as string) || "#000000";
@@ -590,10 +591,10 @@ export class SpecialCategories extends LitElement {
       return html``;
     }
 
-    const mainTitle = cfg?.enhanced_cat_1_main_title;
+    const mainTitle = resolveText(cfg?.enhanced_cat_1_main_title);
     const mainTitleColor =
       cfg?.enhanced_cat_1_main_title_color || "#000000";
-    const mainSubtitle = cfg?.enhanced_cat_1_main_subtitle;
+    const mainSubtitle = resolveText(cfg?.enhanced_cat_1_main_subtitle);
     const mainSubtitleColor =
       cfg?.enhanced_cat_1_main_subtitle_color || "#000000";
 
@@ -605,7 +606,7 @@ export class SpecialCategories extends LitElement {
             ${categories.map((item, i) => this._renderItem(item, i + 1))}
           </div>
         `
-      : html`<div class="sc-empty">لا توجد تصنيفات لعرضها</div>`;
+      : html`<div class="sc-empty">${resolveText({ ar: "لا توجد تصنيفات لعرضها", en: "No categories to display" })}</div>`;
 
     const body = html`
       <div class="sc-head">
