@@ -12,7 +12,7 @@
     "repository": "https://github.com/apqrinu/tw-shop-bundle",
     "components": [
         {
-            "key": "bc2ed63d-1a9d-4ecd-8a33-1923a5610530",
+            "key": "bc2ed63d-1a9d-fecd-8a33-1923a5610530",
             "title": "تصنيفات مميزة - تسوق",
             "icon": "sicon-add_col_after",
             "name": "special-categories",
