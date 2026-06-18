@@ -652,19 +652,68 @@
                     "maxLength": 30
                 },
                 {
-                    "id": "about_us_btn_url",
-                    "type": "string",
-                    "format": "url",
-                    "inputType": "url",
-                    "label": "اضف رابط الزر",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://salla.sa",
+                    "type": "about_us_btn_url",
                     "icon": "sicon-link",
-                    "value": null,
+                    "label": "اضف رابط الزر",
+                    "id": "ns_cards.url",
+                    "value": [],
+                    "description": null,
                     "required": false,
-                    "minLength": 6,
-                    "maxLength": "500"
+                    "format": "variable-list",
+                    "searchable": true,
+                    "source": "custom",
+                    "sources": [
+                        {
+                            "label": "منتج",
+                            "key": "products",
+                            "value": "products"
+                        },
+                        {
+                            "label": "تصنيف",
+                            "key": "categories",
+                            "value": "categories"
+                        },
+                        {
+                            "label": "ماركة تجارية",
+                            "key": "brands",
+                            "value": "brands"
+                        },
+                        {
+                            "label": "صفحة تعريفية",
+                            "key": "pages",
+                            "value": "pages"
+                        },
+                        {
+                            "label": "مقالة",
+                            "key": "blog_articles",
+                            "value": "blog_articles"
+                        },
+                        {
+                            "label": "تصنيف ضمن المدونة",
+                            "key": "blog_categories",
+                            "value": "blog_categories"
+                        },
+                        {
+                            "label": "التخفيضات",
+                            "key": "offers_link",
+                            "value": "offers_link"
+                        },
+                        {
+                            "label": "الماركات التجارية",
+                            "key": "brands_link",
+                            "value": "brands_link"
+                        },
+                        {
+                            "label": "المدونة",
+                            "key": "blog_link",
+                            "value": "blog_link"
+                        },
+                        {
+                            "label": "رابط خارجي",
+                            "key": "custom",
+                            "value": "custom"
+                        }
+                    ]
                 },
                 {
                     "id": "about_us_btn_color",
@@ -1273,22 +1322,117 @@
                             "required": false
                         },
                         {
-                            "id": "ns_cards.url",
-                            "type": "string",
-                            "format": "text",
-                            "label": "رابط البطاقة",
-                            "description": null,
-                            "labelHTML": null,
-                            "placeholder": "https://",
+                            "type": "items",
                             "icon": "sicon-link",
-                            "value": "#",
-                            "multilanguage": false,
+                            "label": "رابط البطاقة",
+                            "id": "ns_cards.url",
+                            "value": [],
+                            "description": null,
                             "required": false,
-                            "minLength": 0,
-                            "maxLength": "300"
+                            "format": "variable-list",
+                            "searchable": true,
+                            "source": "custom",
+                            "sources": [
+                                {
+                                    "label": "منتج",
+                                    "key": "products",
+                                    "value": "products"
+                                },
+                                {
+                                    "label": "تصنيف",
+                                    "key": "categories",
+                                    "value": "categories"
+                                },
+                                {
+                                    "label": "ماركة تجارية",
+                                    "key": "brands",
+                                    "value": "brands"
+                                },
+                                {
+                                    "label": "صفحة تعريفية",
+                                    "key": "pages",
+                                    "value": "pages"
+                                },
+                                {
+                                    "label": "مقالة",
+                                    "key": "blog_articles",
+                                    "value": "blog_articles"
+                                },
+                                {
+                                    "label": "تصنيف ضمن المدونة",
+                                    "key": "blog_categories",
+                                    "value": "blog_categories"
+                                },
+                                {
+                                    "label": "التخفيضات",
+                                    "key": "offers_link",
+                                    "value": "offers_link"
+                                },
+                                {
+                                    "label": "الماركات التجارية",
+                                    "key": "brands_link",
+                                    "value": "brands_link"
+                                },
+                                {
+                                    "label": "المدونة",
+                                    "key": "blog_link",
+                                    "value": "blog_link"
+                                },
+                                {
+                                    "label": "رابط خارجي",
+                                    "key": "custom",
+                                    "value": "custom"
+                                }
+                            ]
                         }
                     ],
-                    "value": [],
+                    "value": [
+                        {
+                            "ns_cards.badge": "",
+                            "ns_cards.image": "https://cdn.files.salla.network/homepage/418621886/ef652d9e-2339-4246-a996-64c70b6992cb.webp",
+                            "ns_cards.title": "Beauty",
+                            "ns_cards.btn_text": "تسوق الان",
+                            "ns_cards.btn_color": "#000000",
+                            "ns_cards.badge_color": "#000000",
+                            "ns_cards.title_color": "#ffffff",
+                            "ns_cards.btn_bg_color": "#FFD93D",
+                            "ns_cards.badge_bg_color": "#ffffff"
+                        },
+                        {
+                            "ns_cards.badge": "",
+                            "ns_cards.image": "https://cdn.files.salla.network/homepage/418621886/88dff6d9-ef23-4792-885b-81e1f41f1aaa.webp",
+                            "ns_cards.title": "التحديثات",
+                            "ns_cards.btn_text": "تسوق الان",
+                            "ns_cards.btn_color": "#000000",
+                            "ns_cards.badge_color": "#000000",
+                            "ns_cards.title_color": "#ffffff",
+                            "ns_cards.btn_bg_color": "#FFD93D",
+                            "ns_cards.badge_bg_color": "#ffffff"
+                        },
+                        {
+                            "ns_cards.badge": "اكثر مبيعا",
+                            "ns_cards.image": "https://cdn.files.salla.network/homepage/418621886/36063fb6-15ea-42e3-9877-a23b5f648ad8.webp",
+                            "ns_cards.title": "حصريات",
+                            "ns_cards.btn_text": "تسوق الان",
+                            "ns_cards.btn_color": "#000000",
+                            "ns_cards.badge_color": "#000000",
+                            "ns_cards.title_color": "#ffffff",
+                            "ns_cards.btn_bg_color": "#FFD93D",
+                            "ns_cards.badge_bg_color": "#ffffff"
+                        },
+                        {
+                            "ns_cards.url": "",
+                            "ns_cards.badge": "",
+                            "ns_cards.image": "https://cdn.files.salla.network/homepage/418621886/ccefac64-a621-446d-8368-95c6b7417243.webp",
+                            "ns_cards.title": "Beauty",
+                            "ns_cards.btn_text": "",
+                            "ns_cards.btn_color": "#000000",
+                            "ns_cards.badge_color": "#000000",
+                            "ns_cards.title_color": "#ffffff",
+                            "ns_cards.btn_bg_color": "#FFD93D",
+                            "ns_cards.badge_bg_color": "#ffffff"
+                        }
+                    ],
                     "minLength": "4",
                     "maxLength": "4"
                 }
