@@ -524,6 +524,12 @@
             "image": "https://apqrinu-co.com/wp-content/uploads/2025/07/9.jpg",
             "fields": [
                 {
+                    "type": "static",
+                    "format": "description",
+                    "id": "asd",
+                    "value": "<div ><h6 >معاينة المكون</h6><img class='w-full' src='https://apqrinu-co.com/wp-content/uploads/2025/07/9.jpg'></div>"
+                },
+                {
                     "id": "about_us_image",
                     "type": "string",
                     "format": "image",
@@ -534,7 +540,7 @@
                     "icon": "sicon-image",
                     "value": "https://apqrinu-co.com/wp-content/uploads/2025/07/DSCF2844-1-scaled-1.webp",
                     "required": false,
-                     "conditions": [
+                    "conditions": [
                         {
                             "id": "about_us_video_s",
                             "value": true,
@@ -765,6 +771,208 @@
                     "multichoice": false,
                     "searchable": true,
                     "required": false
+                }
+            ]
+        },
+        {
+            "key": "dbec28fa-6793-45ae-a657-cd7e9a33b9af",
+            "title": "مميزات المتجر - تسوق",
+            "icon": "sicon-shopping-bag2",
+            "name": "special-store",
+            "image": "https://apqrinu-co.com/wp-content/uploads/2025/07/10.jpg",
+            "fields": [
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "asd",
+                    "value": "<div ><h6 >معاينة المكون</h6><img class='w-full' src='https://apqrinu-co.com/wp-content/uploads/2025/07/10.jpg'></div>"
+                },
+                {
+                    "id": "sp_bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "اختر لون خلفية السيكشن",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#f5f5f5",
+                    "required": false
+                },
+                {
+                    "id": "sp_bg_color_part1",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "اختر لون خلفية الجزء الاول",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#ffffff",
+                    "required": false
+                },
+                {
+                    "id": "sp_bg_color_part2",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "اختر لون خلفية الجزء الثاني",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#ffffff",
+                    "required": false
+                },
+                {
+                    "id": "sp_video",
+                    "type": "string",
+                    "format": "url",
+                    "inputType": "url",
+                    "label": "اضف رابط الفيديو هنا",
+                    "description": "رابط الفيديو بامتداد mp4",
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://salla.sa",
+                    "icon": "sicon-link",
+                    "value": "https://urban-furniture-demo.myshopify.com/cdn/shop/videos/c/vp/79df0a0432ea4e76a189f0bce09dbdd9/79df0a0432ea4e76a189f0bce09dbdd9.HD-1080p-4.8Mbps-28465998.mp4?v=0",
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "500"
+                },
+                {
+                    "id": "sp",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "اضف مميزات المتجر",
+                    "description": "يمكنك اضافة 6 مميزات للمنتج",
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "sp.icon",
+                            "type": "string",
+                            "format": "icon",
+                            "label": "الايقونة",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-user-circle",
+                            "value": "sicon-store",
+                            "required": false
+                        },
+                        {
+                            "id": "sp.line_sp",
+                            "type": "static",
+                            "format": "line",
+                            "label": null,
+                            "icon": "sicon-minus"
+                        },
+                        {
+                            "id": "sp.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة",
+                            "description": "يمكنك اضافة صورة بدلا من الايقونة",
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        },
+                        {
+                            "id": "sp.title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "عنوان الميزة",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "عنوان الميزة",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "sp.title_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون العنوان",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#000000",
+                            "required": false
+                        },
+                        {
+                            "id": "sp.des",
+                            "type": "string",
+                            "format": "text",
+                            "label": "نص إضافي",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "عنوان الميزة",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": "120"
+                        },
+                        {
+                            "id": "sp.des_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون النص",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#696969",
+                            "required": false
+                        }
+                    ],
+                    "value": [
+                        {
+                            "sp.des": "مصنوع من حديد متين عالي الجودة لتحمّل الاستخدام اليومي وضمان الثبات والاستقرار لفترة طويلة.",
+                            "sp.icon": "sicon-bell",
+                            "sp.image": "https://cdn.salla.sa/form-builder/kqqPeqcXdmxP1Vlyh4Tmb6Cw6feZqKiUkCqwynFt.gif",
+                            "sp.title": "هيكل حديدي قوي",
+                            "sp.line_sp": "",
+                            "sp.des_color": "#919191",
+                            "sp.title_color": "#000000"
+                        },
+                        {
+                            "sp.des": "لون رمادي أنيق يناسب مختلف أنماط الديكور الداخلي ويضيف لمسة عصرية لأي مساحة.",
+                            "sp.icon": "sicon-gold-badge",
+                            "sp.image": "https://cdn.salla.sa/form-builder/IIyW3XPTels0f4NcbQtnySd2jZHVnHBXIE0sO4zT.gif",
+                            "sp.title": "تصميم أنيق بلون رمادي عصري",
+                            "sp.line_sp": "",
+                            "sp.des_color": "#919191",
+                            "sp.title_color": "#000000"
+                        },
+                        {
+                            "sp.des": "مقعد وظهر مُبطّنان بطبقة ناعمة تمنحك تجربة جلوس مريحة، مثالية للاستخدام لفترات طويلة.",
+                            "sp.icon": "sicon-delivery-parcel2",
+                            "sp.image": "https://cdn.salla.sa/form-builder/3qREdRhLOm8LtKpczsaA4BpmNmN8fVlDseb9erie.gif",
+                            "sp.title": "تبطين مريح وفاخر",
+                            "sp.line_sp": "",
+                            "sp.des_color": "#8f8f8f",
+                            "sp.title_color": "#000000"
+                        },
+                        {
+                            "sp.des": "الخامات المستخدمة مقاومة للبقع وسهلة التنظيف، مما يجعل الحفاظ على المظهر الجديد للكرسي أمرًا بسيطًا.",
+                            "sp.icon": "sicon-discount-calculator",
+                            "sp.image": "https://cdn.salla.sa/form-builder/iSeULzrDaBuvJUoS6pn5ehzjivfWdDou3Nyc4oK6.gif",
+                            "sp.title": "سهل التنظيف والعناية",
+                            "sp.line_sp": "",
+                            "sp.des_color": "#949494",
+                            "sp.title_color": "#000000"
+                        }
+                    ],
+                    "minLength": "3",
+                    "maxLength": "6"
                 }
             ]
         }
