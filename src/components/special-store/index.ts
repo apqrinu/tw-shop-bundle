@@ -248,11 +248,15 @@ export class SpecialStore extends LitElement {
       width: 100%;
       padding: 2.5rem;
       border-radius: 1rem;
+      /* On mobile (column layout) show the video before the features */
+      order: -1;
     }
 
     @media (min-width: 1024px) {
       .ss-left-side {
         width: 33.3333%;
+        /* Restore the original DOM order on desktop (row layout) */
+        order: 0;
       }
     }
 

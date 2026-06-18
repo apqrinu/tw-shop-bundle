@@ -779,13 +779,13 @@
             "title": "مميزات المتجر - تسوق",
             "icon": "sicon-shopping-bag2",
             "name": "special-store",
-            "image": "https://apqrinu-co.com/wp-content/uploads/2025/07/10.jpg",
+            "image": "https://i.ibb.co/FLkMXJ76/Screenshot-2026-06-18-115150-webp.webp",
             "fields": [
                 {
                     "type": "static",
                     "format": "description",
                     "id": "asd",
-                    "value": "<div ><h6 >معاينة المكون</h6><img class='w-full' src='https://apqrinu-co.com/wp-content/uploads/2025/07/10.jpg'></div>"
+                    "value": "<div ><h6 >معاينة المكون</h6><img class='w-full' src='https://i.ibb.co/FLkMXJ76/Screenshot-2026-06-18-115150-webp.webp'></div>"
                 },
                 {
                     "id": "sp_bg_color",
@@ -973,6 +973,324 @@
                     ],
                     "minLength": "3",
                     "maxLength": "6"
+                }
+            ]
+        },
+        {
+            "key": "8d7e9a2c-3b4f-4e5d-9c1a-8f6b3a2d1e4f",
+            "title": "شبكة معرض التصنيفات - تسوق",
+            "icon": "sicon-browser-alt",
+            "name": "enhanced-cats-banners",
+            "image": "https://i.ibb.co/vCZRZhvD/Screenshot-2026-06-18-120655-webp.webp",
+            "fields": [
+                {
+                    "type": "static",
+                    "format": "description",
+                    "id": "asd",
+                    "value": "<div ><h6 >معاينة المكون</h6><img class='w-full' src='https://i.ibb.co/vCZRZhvD/Screenshot-2026-06-18-120655-webp.webp'></div>"
+                },
+                {
+                    "id": "ns_in_container",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إضافة العنصر داخل حاوية (Container)",
+                    "description": "تفعيل هذا الخيار لإضافة العنصر داخل حاوية محددة، مما يساعد في تنظيم التصميم وتحسين تجربة المستخدم.",
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "ns_margin_top_zero",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "إزالة المسافة العلوية",
+                    "description": "تمكين هذا الخيار سيؤدي إلى إزالة المسافة العلوية للمكون.",
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": false,
+                    "selected": false,
+                    "required": false
+                },
+                {
+                    "id": "ns_main_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان الرئيسي",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": null,
+                    "icon": "sicon-format-text-alt",
+                    "value": "تسوق التشكيلة",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 0,
+                    "maxLength": "60"
+                },
+                {
+                    "id": "ns_main_title_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون نص العنوان الرئيسي",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#000000",
+                    "required": false
+                },
+                {
+                    "id": "ns_main_subtitle",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان الفرعي",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": null,
+                    "icon": "sicon-format-text-alt",
+                    "value": "اكتشف أحدث الفئات والعروض",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 0,
+                    "maxLength": "150"
+                },
+                {
+                    "id": "ns_main_subtitle_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون نص العنوان الفرعي",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#777777",
+                    "required": false
+                },
+                {
+                    "id": "ns_radius",
+                    "type": "number",
+                    "format": "float",
+                    "inputType": "number",
+                    "label": "حواف دائرية للبطاقات (بكسل)",
+                    "description": "القيمة المدخلة يجب ان تكون بين 0 و 40",
+                    "labelHTML": null,
+                    "placeholder": null,
+                    "icon": "sicon-hashtag",
+                    "value": 16,
+                    "required": false,
+                    "step": "1",
+                    "minimum": "0",
+                    "maximum": "40"
+                },
+                {
+                    "id": "ns_gap",
+                    "type": "number",
+                    "format": "float",
+                    "inputType": "number",
+                    "label": "المسافة بين البطاقات (بكسل)",
+                    "description": "القيمة المدخلة يجب ان تكون بين 0 و 40",
+                    "labelHTML": null,
+                    "placeholder": null,
+                    "icon": "sicon-hashtag",
+                    "value": 16,
+                    "required": false,
+                    "step": "1",
+                    "minimum": "0",
+                    "maximum": "40"
+                },
+                {
+                    "id": "ns_animate",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "اختر الانيميشن للبطاقات",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [
+                        {
+                            "label": "fade-up",
+                            "value": "fade-up",
+                            "key": "ns11aaaa-1111-2222-3333-444455556601"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "fade-up",
+                            "value": "fade-up",
+                            "key": "ns11aaaa-1111-2222-3333-444455556601"
+                        },
+                        {
+                            "label": "fade-down",
+                            "value": "fade-down",
+                            "key": "ns11aaaa-1111-2222-3333-444455556602"
+                        },
+                        {
+                            "label": "fade-in",
+                            "value": "fade-in",
+                            "key": "ns11aaaa-1111-2222-3333-444455556603"
+                        },
+                        {
+                            "label": "scale-in",
+                            "value": "scale-in",
+                            "key": "ns11aaaa-1111-2222-3333-444455556604"
+                        },
+                        {
+                            "label": "slide-in-up",
+                            "value": "slide-in-up",
+                            "key": "ns11aaaa-1111-2222-3333-444455556605"
+                        }
+                    ],
+                    "source": "Manual",
+                    "multichoice": false,
+                    "searchable": false,
+                    "required": false
+                },
+                {
+                    "id": "ns_cards",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "البطاقات (4 بطاقات بترتيب ثابت)",
+                    "description": "1: علوية يسار صغيرة | 2: سفلية يسار صغيرة | 3: وسط طويلة | 4: يمين الأكبر",
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "ns_cards.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة البطاقة",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        },
+                        {
+                            "id": "ns_cards.badge",
+                            "type": "string",
+                            "format": "text",
+                            "label": "نص الشارة (اختياري)",
+                            "description": "مثال: New in",
+                            "labelHTML": null,
+                            "placeholder": null,
+                            "icon": "sicon-format-text-alt",
+                            "value": "",
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 0,
+                            "maxLength": "30"
+                        },
+                        {
+                            "id": "ns_cards.badge_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون نص الشارة",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#000000",
+                            "required": false
+                        },
+                        {
+                            "id": "ns_cards.badge_bg_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون خلفية الشارة",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#ffffff",
+                            "required": false
+                        },
+                        {
+                            "id": "ns_cards.title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "عنوان البطاقة",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": null,
+                            "icon": "sicon-format-text-alt",
+                            "value": "Beauty",
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 0,
+                            "maxLength": "60"
+                        },
+                        {
+                            "id": "ns_cards.title_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون العنوان",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#ffffff",
+                            "required": false
+                        },
+                        {
+                            "id": "ns_cards.btn_text",
+                            "type": "string",
+                            "format": "text",
+                            "label": "نص الزر (اختياري)",
+                            "description": "اتركه فارغًا لإخفاء الزر",
+                            "labelHTML": null,
+                            "placeholder": null,
+                            "icon": "sicon-format-text-alt",
+                            "value": "",
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 0,
+                            "maxLength": "30"
+                        },
+                        {
+                            "id": "ns_cards.btn_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون نص الزر",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#000000",
+                            "required": false
+                        },
+                        {
+                            "id": "ns_cards.btn_bg_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون خلفية الزر",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#FFD93D",
+                            "required": false
+                        },
+                        {
+                            "id": "ns_cards.url",
+                            "type": "string",
+                            "format": "text",
+                            "label": "رابط البطاقة",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "https://",
+                            "icon": "sicon-link",
+                            "value": "#",
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 0,
+                            "maxLength": "300"
+                        }
+                    ],
+                    "value": [],
+                    "minLength": "4",
+                    "maxLength": "4"
                 }
             ]
         }
