@@ -155,41 +155,74 @@ export class SpecialCategories extends LitElement {
       font-size: 1rem;
     }
 
-    /* ── Bento Grid ── */
+    /* ── Bento Grid ──
+       Target layout (7 items, desktop): 5 columns × 2 rows, equal height.
+       Grid flows RTL: the first category (item-1, large) starts on the RIGHT.
+         Row 1 (R→L): item-1 (2 wide) · item-2 · item-3 · item-4  → 2+1+1+1 = 5
+         Row 2 (R→L): item-5 (2 wide) · item-6 · item-7 (2 wide)  → 2+1+2 = 5 */
     .sc-grid {
       display: grid;
+      direction: rtl;
       gap: 0.75rem;
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: 150px;
+      grid-auto-rows: 160px;
     }
 
-    /* item-1 is the large feature card */
-    .sc-item.item-1 {
-      grid-column: span 2;
+    /* Mobile bento (uses a 6-column track so we can express thirds and an
+       uneven pair):
+         Row 1: item-1 · item-2 · item-3   (3 equal, each 2 cols)
+         Row 2: item-4                      (full row)
+         Row 3: item-5 (large) · item-6     (4 + 2 cols)
+         Row 4: item-7                      (full row) */
+    @media (max-width: 639px) {
+      .sc-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .sc-item.item-1,
+      .sc-item.item-2,
+      .sc-item.item-3 {
+        grid-column: span 2;
+      }
+      .sc-item.item-4 {
+        grid-column: 1 / -1;
+      }
+      .sc-item.item-5 {
+        grid-column: span 4;
+      }
+      .sc-item.item-6 {
+        grid-column: span 2;
+      }
+      .sc-item.item-7 {
+        grid-column: 1 / -1;
+      }
     }
 
     @media (min-width: 640px) {
       .sc-grid {
-        grid-auto-rows: 180px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 220px;
       }
     }
 
     @media (min-width: 1024px) {
       .sc-grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 200px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 300px;
         gap: 1rem;
       }
-      .sc-item.item-1 {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
-      .sc-item.item-2 {
-        grid-column: span 2;
-      }
-      .sc-item.item-5 {
-        grid-column: span 2;
-      }
+      /* Explicit placement (grid-area: row-start / col-start / row-end / col-end).
+         Under direction:rtl, column line 1 is the RIGHT edge, so the order runs
+         right→left, top→bottom. Row 1 starts with 3 small cards from the right,
+         then the large card on the left:
+           Row 1 (R→L): item-1 · item-2 · item-3 · item-4 (large, cols 4-5, left)
+           Row 2 (R→L): item-5 (large, cols 1-2, right) · item-6 · item-7 (large, left) */
+      .sc-item.item-1 { grid-area: 1 / 1 / 2 / 2; }
+      .sc-item.item-2 { grid-area: 1 / 2 / 2 / 3; }
+      .sc-item.item-3 { grid-area: 1 / 3 / 2 / 4; }
+      .sc-item.item-4 { grid-area: 1 / 4 / 2 / 6; }
+      .sc-item.item-5 { grid-area: 2 / 1 / 3 / 3; }
+      .sc-item.item-6 { grid-area: 2 / 3 / 3 / 4; }
+      .sc-item.item-7 { grid-area: 2 / 4 / 3 / 6; }
     }
 
     /* ── Card ── */
@@ -232,7 +265,9 @@ export class SpecialCategories extends LitElement {
       pointer-events: none;
     }
 
-    /* ── Card Content ── */
+    /* ── Card Content ──
+       RTL so the button aligns to the right (in line with the title text)
+       and the arrow icon renders after the text (to its left). */
     .sc-content {
       position: absolute;
       top: 0.75rem;
@@ -242,6 +277,7 @@ export class SpecialCategories extends LitElement {
       max-width: 100%;
       padding: 0.5rem;
       display: flex;
+      direction: rtl;
       align-items: flex-start;
       justify-content: center;
       flex-direction: column;
@@ -294,7 +330,7 @@ export class SpecialCategories extends LitElement {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 0.5rem 0.75rem;
+      padding: 0.2rem 0.3rem;
       font-size: 0.75rem;
       border-radius: 8px;
     }
@@ -565,7 +601,7 @@ export class SpecialCategories extends LitElement {
 
     const grid = categories.length
       ? html`
-          <div class="sc-grid">
+          <div class="sc-grid" dir="rtl">
             ${categories.map((item, i) => this._renderItem(item, i + 1))}
           </div>
         `
