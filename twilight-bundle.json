@@ -527,6 +527,256 @@
                     "maxLength": "7"
                 }
             ]
+        },
+         {
+            "key": "bcb1d53f-9e6d-4b67-9175-e47ed477b1ba",
+            "title": "من نحن - تسوق",
+            "icon": "sicon-content",
+            "name": "about-us",
+            "image": "https://apqrinu-co.com/wp-content/uploads/2025/07/9.jpg",
+            "fields": [
+                {
+                    "id": "about_us_image",
+                    "type": "string",
+                    "format": "image",
+                    "label": "الصورة",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": "https://apqrinu-co.com/wp-content/uploads/2025/07/DSCF2844-1-scaled-1.webp",
+                    "required": false
+                },
+                {
+                    "id": "about_us_image_en",
+                    "type": "string",
+                    "format": "image",
+                    "label": "الصورة في اللغة الانجليزية",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://hostname.com/image.png",
+                    "icon": "sicon-image",
+                    "value": "https://apqrinu-co.com/wp-content/uploads/2025/07/DSCF2844-1-scaled-1.webp",
+                    "required": false
+                },
+                {
+                    "id": "about_us_video_s",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "تبغى عرض فيديو بدلا من الصورة",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": false,
+                    "required": false
+                },
+                {
+                    "id": "about_us_video",
+                    "type": "string",
+                    "format": "url",
+                    "inputType": "url",
+                    "label": "اضف رابط الفيديو",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://salla.sa",
+                    "icon": "sicon-link",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "500"
+                },
+                {
+                    "id": "about_us_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": null,
+                    "icon": "sicon-format-text-alt",
+                    "value": "ثيم  شجّع زوار متجرك على الشرا",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "about_us_title_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون العنوان",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#000000",
+                    "required": false
+                },
+                {
+                    "id": "about_us_des",
+                    "type": "string",
+                    "format": "text",
+                    "label": "نص إضافي",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": null,
+                    "icon": "sicon-format-text-alt",
+                    "value": "شجّع زوار متجرك على الشراء عبر عروض خاصة واحصل على أفضل العروض الآن! استمتع بخصم يصل إلى 50%",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "250"
+                },
+                {
+                    "id": "about_us_des_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون النص الإضافي",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#6e6e6e",
+                    "required": false
+                },
+                {
+                    "id": "about_us_btn",
+                    "type": "string",
+                    "format": "text",
+                    "label": "الزر",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": null,
+                    "icon": "sicon-format-text-alt",
+                    "value": "تسوق الان",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": 30
+                },
+                {
+                    "id": "about_us_btn_url",
+                    "type": "string",
+                    "format": "url",
+                    "inputType": "url",
+                    "label": "اضف رابط الزر",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "e.g. https://salla.sa",
+                    "icon": "sicon-link",
+                    "value": null,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "500"
+                },
+                {
+                    "id": "about_us_btn_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون الزر",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#ffffff",
+                    "required": false
+                },
+                {
+                    "id": "about_us_btn_bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون خلفية الزر",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#000000",
+                    "required": false
+                },
+                {
+                    "id": "about_us_animate",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "اختر الانيميشن",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-keyboard_arrow_down",
+                    "selected": [
+                        {
+                            "label": "fade-up",
+                            "value": "fade-up",
+                            "key": "c0d8621f-657d-40b3-8a41-e5176c3bcf1c"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "slide-in-up",
+                            "value": "slide-in-up",
+                            "key": "a6e8d200-821c-4b26-8236-66c8cf3f6e25"
+                        },
+                        {
+                            "label": "slide-in-down",
+                            "value": "slide-in-down",
+                            "key": "d646a641-4538-4e82-9821-c77a95aa6881"
+                        },
+                        {
+                            "label": "slide-in-right",
+                            "value": "slide-in-right",
+                            "key": "2e63098b-5342-47db-b576-da552186c935"
+                        },
+                        {
+                            "label": "slide-in-left",
+                            "value": "slide-in-left",
+                            "key": "9387925d-20d4-4d4f-9619-0b17afe58762"
+                        },
+                        {
+                            "label": "fade-in",
+                            "value": "fade-in",
+                            "key": "7cd18bf7-54fe-4923-8980-b9680843423e"
+                        },
+                        {
+                            "label": "fade-up",
+                            "value": "fade-up",
+                            "key": "c0d8621f-657d-40b3-8a41-e5176c3bcf1c"
+                        },
+                        {
+                            "label": "fade-down",
+                            "value": "fade-down",
+                            "key": "2be2deb0-f8ac-41fb-84a2-d1d35628024f"
+                        },
+                        {
+                            "label": "fade-right",
+                            "value": "fade-right",
+                            "key": "3ff7c6b7-2bc5-4c05-ad19-3d7f917c3fea"
+                        },
+                        {
+                            "label": "fade-left",
+                            "value": "fade-left",
+                            "key": "cf2c8317-b73f-4b66-876e-68987bda1cfc"
+                        },
+                        {
+                            "label": "scale-in",
+                            "value": "scale-in",
+                            "key": "cf633380-a198-4eff-a623-a92601301ba2"
+                        },
+                        {
+                            "label": "scale-up",
+                            "value": "scale-up",
+                            "key": "e479b86a-8fed-42fd-b03f-f33c2b5aff78"
+                        },
+                        {
+                            "label": "rotate-in",
+                            "value": "rotate-in",
+                            "key": "f2cfbd5e-5817-498f-a06d-65425fa8afbd"
+                        }
+                    ],
+                    "source": "Manual",
+                    "multichoice": false,
+                    "searchable": true,
+                    "required": false
+                }
+            ]
         }
     ]
 }
