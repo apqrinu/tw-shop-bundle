@@ -397,7 +397,127 @@
                             "required": false
                         }
                     ],
-                    "value": [],
+                    "value": [
+                        {
+                            "t_category.image": "https://cdn.salla.sa/form-builder/7fiTRRfzjUkczYCr96NQzTQ8JwTUZykMzuMCMBnA.jpg",
+                            "t_category.title": "ديكور وإضاءات",
+                            "t_category.overlay": false,
+                            "t_category.btn_text": "تسوق الان",
+                            "t_category.image_en": "https://cdn.files.salla.network/homepage/418621886/fe559310-470a-4d94-bafd-ec3b61c1bf26.gif",
+                            "t_category.animation": [
+                                "fade-left"
+                            ],
+                            "t_category.sub_title": "",
+                            "t_category.title_color": "#ffffff",
+                            "t_category.btn_bg_color": "#ffffff",
+                            "t_category.btn_text_color": "#000",
+                            "t_category.sub_title_color": "#ededed",
+                            "t_category.border_radius_image": 25,
+                            "t_category.display_none_subtitle": true
+                        },
+                        {
+                            "t_category.image": "https://cdn.salla.sa/form-builder/ehYc3Y3BUmqn3s7W4GwQ8HGrvJFHQKnrrUYyWgc0.jpg",
+                            "t_category.title": "إكسسوارات",
+                            "t_category.overlay": false,
+                            "t_category.btn_text": "تسوق الان",
+                            "t_category.image_en": "",
+                            "t_category.animation": [
+                                "fade-left"
+                            ],
+                            "t_category.sub_title": "",
+                            "t_category.title_color": "#ffffff",
+                            "t_category.btn_bg_color": "#ffffff",
+                            "t_category.btn_text_color": "#000",
+                            "t_category.sub_title_color": "#474747",
+                            "t_category.border_radius_image": 25,
+                            "t_category.display_none_subtitle": true
+                        },
+                        {
+                            "t_category.image": "https://cdn.salla.sa/form-builder/LnB4KfrtDfLWU06iGalzpVj2WvIvyS538pwPEbZD.jpg",
+                            "t_category.title": "كراسي",
+                            "t_category.overlay": false,
+                            "t_category.btn_text": "تسوق الان",
+                            "t_category.image_en": "",
+                            "t_category.animation": [
+                                "fade-left"
+                            ],
+                            "t_category.sub_title": "",
+                            "t_category.title_color": "#000000",
+                            "t_category.btn_bg_color": "#ffffff",
+                            "t_category.btn_text_color": "#000",
+                            "t_category.sub_title_color": "#474747",
+                            "t_category.border_radius_image": 25,
+                            "t_category.display_none_subtitle": true
+                        },
+                        {
+                            "t_category.image": "https://cdn.salla.sa/form-builder/aK9ugiaf05aIblvEM53Qt2yhvKC9I5987XrSpll0.jpg",
+                            "t_category.title": "منتجات الكنب",
+                            "t_category.overlay": false,
+                            "t_category.btn_text": "تسوق الان",
+                            "t_category.image_en": "",
+                            "t_category.animation": [
+                                "fade-left"
+                            ],
+                            "t_category.sub_title": "اكتشف أثاث أنيق وجودة عالية بأسعار تناسب كل بيت",
+                            "t_category.title_color": "#ffffff",
+                            "t_category.btn_bg_color": "#ffffff",
+                            "t_category.btn_text_color": "#000",
+                            "t_category.sub_title_color": "#f5f5f5",
+                            "t_category.border_radius_image": 25,
+                            "t_category.display_none_subtitle": false
+                        },
+                        {
+                            "t_category.image": "https://cdn.salla.sa/form-builder/1dkVoPI38Q2h1YW0yTIybZ4ykuMW5hZDswLMTyUe.jpg",
+                            "t_category.title": "كراسي مميزة",
+                            "t_category.overlay": false,
+                            "t_category.btn_text": "تسوق الان",
+                            "t_category.image_en": "",
+                            "t_category.animation": [
+                                "fade-up"
+                            ],
+                            "t_category.sub_title": "أثاث بتصاميم عصرية وتوصيل سريع حتى باب بيتك",
+                            "t_category.title_color": "#000000",
+                            "t_category.btn_bg_color": "#ffffff",
+                            "t_category.btn_text_color": "#000",
+                            "t_category.sub_title_color": "#474747",
+                            "t_category.border_radius_image": 25,
+                            "t_category.display_none_subtitle": false
+                        },
+                        {
+                            "t_category.image": "https://cdn.salla.sa/form-builder/9n0mVoSpy2MN9kKb6WeKjvuhN5hEKgZITs3g5ooq.jpg",
+                            "t_category.title": "طاولات",
+                            "t_category.overlay": false,
+                            "t_category.btn_text": "تسوق الان",
+                            "t_category.image_en": "",
+                            "t_category.animation": [
+                                "fade-up"
+                            ],
+                            "t_category.sub_title": "",
+                            "t_category.title_color": "#000000",
+                            "t_category.btn_bg_color": "#ffffff",
+                            "t_category.btn_text_color": "#000",
+                            "t_category.sub_title_color": "#474747",
+                            "t_category.border_radius_image": 25,
+                            "t_category.display_none_subtitle": true
+                        },
+                        {
+                            "t_category.image": "https://cdn.salla.sa/form-builder/3m6Xjk8p5Jt29SQXpnIsdto84TkfRJxUzrs6KXmJ.jpg",
+                            "t_category.title": "اكسسوارات وطاولات",
+                            "t_category.overlay": false,
+                            "t_category.btn_text": "تسوق الان",
+                            "t_category.image_en": "",
+                            "t_category.animation": [
+                                "fade-up"
+                            ],
+                            "t_category.sub_title": "جدد ديكور منزلك بأقل التكاليف – عروض خاصة لفترة محدودة",
+                            "t_category.title_color": "#000000",
+                            "t_category.btn_bg_color": "#ffffff",
+                            "t_category.btn_text_color": "#000",
+                            "t_category.sub_title_color": "#454545",
+                            "t_category.border_radius_image": 25,
+                            "t_category.display_none_subtitle": false
+                        }
+                    ],
                     "minLength": 1,
                     "maxLength": "7"
                 }
