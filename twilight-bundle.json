@@ -112,18 +112,6 @@
                             "required": false
                         },
                         {
-                            "id": "t_category.image_en",
-                            "type": "string",
-                            "format": "image",
-                            "label": "الصورة في اللغة الانجليزية",
-                            "description": null,
-                            "labelHTML": null,
-                            "placeholder": "e.g. https://hostname.com/image.png",
-                            "icon": "sicon-image",
-                            "value": null,
-                            "required": false
-                        },
-                        {
                             "id": "t_category.title",
                             "type": "string",
                             "format": "text",
@@ -528,7 +516,7 @@
                 }
             ]
         },
-         {
+        {
             "key": "bcb1d53f-9e6d-4b67-9175-e47ed477b1ba",
             "title": "من نحن - تسوق",
             "icon": "sicon-content",
@@ -540,18 +528,6 @@
                     "type": "string",
                     "format": "image",
                     "label": "الصورة",
-                    "description": null,
-                    "labelHTML": null,
-                    "placeholder": "e.g. https://hostname.com/image.png",
-                    "icon": "sicon-image",
-                    "value": "https://apqrinu-co.com/wp-content/uploads/2025/07/DSCF2844-1-scaled-1.webp",
-                    "required": false
-                },
-                {
-                    "id": "about_us_image_en",
-                    "type": "string",
-                    "format": "image",
-                    "label": "الصورة في اللغة الانجليزية",
                     "description": null,
                     "labelHTML": null,
                     "placeholder": "e.g. https://hostname.com/image.png",
@@ -581,10 +557,17 @@
                     "labelHTML": null,
                     "placeholder": "e.g. https://salla.sa",
                     "icon": "sicon-link",
-                    "value": null,
+                    "value": "https://urban-furniture-demo.myshopify.com/cdn/shop/videos/c/vp/79df0a0432ea4e76a189f0bce09dbdd9/79df0a0432ea4e76a189f0bce09dbdd9.HD-1080p-4.8Mbps-28465998.mp4?v=0",
                     "required": false,
                     "minLength": 6,
-                    "maxLength": "500"
+                    "maxLength": "500",
+                    "conditions":[
+                        {
+                            "id":"about_us_video_s",
+                            "operation":"=",
+                            "value":true
+                        }
+                    ]
                 },
                 {
                     "id": "about_us_title",
@@ -595,7 +578,7 @@
                     "labelHTML": null,
                     "placeholder": null,
                     "icon": "sicon-format-text-alt",
-                    "value": "ثيم  شجّع زوار متجرك على الشرا",
+                    "value": "أثاث يبهّر من أول نظرة",
                     "multilanguage": false,
                     "required": false,
                     "minLength": 6,
@@ -622,7 +605,7 @@
                     "labelHTML": null,
                     "placeholder": null,
                     "icon": "sicon-format-text-alt",
-                    "value": "شجّع زوار متجرك على الشراء عبر عروض خاصة واحصل على أفضل العروض الآن! استمتع بخصم يصل إلى 50%",
+                    "value": "في عالم تتغيّر فيه صيحات الديكور كل يوم، اخترنا نكون مختلفين. نحن نؤمن إن الأثاث أكثر من مجرد قطع عملية… هو انعكاس لأسلوبك، وراحة يومك، ولمسة تكمّل شخصيتك داخل كل زاوية في بيتك. من تصاميمنا العصرية وحتى القطع الكلاسيكية،",
                     "multilanguage": false,
                     "required": false,
                     "minLength": 6,

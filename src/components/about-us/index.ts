@@ -213,7 +213,7 @@ export class AboutUs extends LitElement {
 
     @media (min-width: 1024px) {
       .au-desc {
-        text-align: end;
+        text-align: start;
       }
       :host([dir="ltr"]) .au-desc {
         text-align: start;
@@ -241,7 +241,7 @@ export class AboutUs extends LitElement {
     }
 
     .au-btn i {
-      margin-inline-end: 0.5rem;
+      margin-inline-start: 0.5rem;
     }
 
     /* ── Animation Hook ── */
@@ -354,7 +354,7 @@ export class AboutUs extends LitElement {
                         style="color: ${btnColor}; background-color: ${btnBgColor};"
                       >
                         ${cfg?.about_us_btn}
-                        <i class="sicon-arrow-left"></i>
+                        <i class="${this.isRtl ? "sicon-arrow-left" : "sicon-arrow-right"}"></i>
                       </a>
                     `
                   : ""}
