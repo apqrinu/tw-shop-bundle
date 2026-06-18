@@ -1,6 +1,6 @@
 {
     "name": {
-        "ar": "\u0645\u062c\u0645\u0648\u0639\u0629 \u062a\u0633\u0648\u0642",
+        "ar": "مجموعة تسوق",
         "en": "shop bundle"
     },
     "description": {
@@ -10,5 +10,398 @@
     "author_email": "omar-mazen@apqrinu-admin.online",
     "support_url": "",
     "repository": "https://github.com/apqrinu/tw-shop-bundle",
-    "components": []
+    "components": [
+        {
+            "key": "bc2ed63d-1a9d-4ecd-8a33-1923a5610530",
+            "title": "تصنيفات مميزة - تسوق",
+            "icon": "sicon-add_col_after",
+            "name": "special-categories",
+            "image": "https://apqrinu-co.com/wp-content/uploads/2025/07/1.jpg",
+            "fields": [
+                {
+                    "id": "put_section_in_container",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "وضع السيكشن داخل حاوية - container",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": false
+                },
+                {
+                    "id": "enhanced_cat_1_main_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان رئيسي للسيكشن",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "مثال : الاقسام الرئيسية",
+                    "icon": "sicon-format-text-alt",
+                    "value": "الأقسام المميزة",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": "4",
+                    "maxLength": "60"
+                },
+                {
+                    "id": "enhanced_cat_1_main_title_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون العنوان الرئيسي",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#029fae",
+                    "required": false
+                },
+                {
+                    "id": "enhanced_cat_1_main_subtitle",
+                    "type": "string",
+                    "format": "text",
+                    "label": "وصف اسفل العنوان الرئيسي",
+                    "description": null,
+                    "labelHTML": null,
+                    "placeholder": "تسوق احدث المنتجات بخصم لفترة محدودة",
+                    "icon": "sicon-format-text-alt",
+                    "value": "تسوق احدث المنتجات بخصم لفترة محدودة",
+                    "multilanguage": false,
+                    "required": false,
+                    "minLength": 6,
+                    "maxLength": "150"
+                },
+                {
+                    "id": "enhanced_cat_1_main_subtitle_color",
+                    "type": "string",
+                    "format": "color",
+                    "inputType": "color",
+                    "label": "لون الوصف",
+                    "description": null,
+                    "labelHTML": null,
+                    "icon": "sicon-format-fill",
+                    "value": "#525252",
+                    "required": false
+                },
+                {
+                    "id": "t_category",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "التصنيفات",
+                    "description": "الارقام في الصورة يوضح مكان التصميم او التصنيف في السيكشن",
+                    "labelHTML": "<p> يمكنك اضافت تصنيفات بحد اقصي 7 تصنيفات ويظهر معك شكل السيكشن كالاتي <img src=\"https://irtiqa-alkhalej.com/wp-content/uploads/2025/05/1.jpg\" alt=\"ثيم-تسوق\"></p><p><img src=\"https://irtiqa-alkhalej.com/wp-content/uploads/2025/06/1-1.jpg\" alt=\"ثيم-تسوق\"></p>",
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "t_category.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "الصورة",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        },
+                        {
+                            "id": "t_category.image_en",
+                            "type": "string",
+                            "format": "image",
+                            "label": "الصورة في اللغة الانجليزية",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        },
+                        {
+                            "id": "t_category.title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان على الصورة",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "اسم التصنيف",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": "4",
+                            "maxLength": "40"
+                        },
+                        {
+                            "id": "t_category.title_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون العنوان",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#ffffff",
+                            "required": false
+                        },
+                        {
+                            "id": "t_category.sub_title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "الوصف",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "تسوق احدث المنتجات بخصم لفترة محدودة",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": "4",
+                            "maxLength": "80"
+                        },
+                        {
+                            "id": "t_category.sub_title_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون الوصف",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#004956",
+                            "required": false
+                        },
+                        {
+                            "id": "t_category.display_none_subtitle",
+                            "type": "boolean",
+                            "format": "switch",
+                            "label": "اخفاء الوصف على الموبايل",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-toggle-off",
+                            "value": true,
+                            "selected": false,
+                            "required": false
+                        },
+                        {
+                            "id": "t_category.btn_text",
+                            "type": "string",
+                            "format": "text",
+                            "label": "نص الزر",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "تسوق الان",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": "4",
+                            "maxLength": "40"
+                        },
+                        {
+                            "id": "t_category.btn_text_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون نص الزر",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#000",
+                            "required": false
+                        },
+                        {
+                            "id": "t_category.btn_bg_color",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون خلفية الزر",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-format-fill",
+                            "value": "#ffffff",
+                            "required": false
+                        },
+                        {
+                            "type": "items",
+                            "icon": "sicon-link",
+                            "label": "الرابط",
+                            "id": "t_category.btn_link",
+                            "value": [],
+                            "description": null,
+                            "required": false,
+                            "format": "variable-list",
+                            "searchable": true,
+                            "source": "custom",
+                            "sources": [
+                                {
+                                    "label": "منتج",
+                                    "key": "products",
+                                    "value": "products"
+                                },
+                                {
+                                    "label": "تصنيف",
+                                    "key": "categories",
+                                    "value": "categories"
+                                },
+                                {
+                                    "label": "ماركة تجارية",
+                                    "key": "brands",
+                                    "value": "brands"
+                                },
+                                {
+                                    "label": "صفحة تعريفية",
+                                    "key": "pages",
+                                    "value": "pages"
+                                },
+                                {
+                                    "label": "مقالة",
+                                    "key": "blog_articles",
+                                    "value": "blog_articles"
+                                },
+                                {
+                                    "label": "تصنيف ضمن المدونة",
+                                    "key": "blog_categories",
+                                    "value": "blog_categories"
+                                },
+                                {
+                                    "label": "التخفيضات",
+                                    "key": "offers_link",
+                                    "value": "offers_link"
+                                },
+                                {
+                                    "label": "الماركات التجارية",
+                                    "key": "brands_link",
+                                    "value": "brands_link"
+                                },
+                                {
+                                    "label": "المدونة",
+                                    "key": "blog_link",
+                                    "value": "blog_link"
+                                },
+                                {
+                                    "label": "رابط خارجي",
+                                    "key": "custom",
+                                    "value": "custom"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "t_category.overlay",
+                            "type": "boolean",
+                            "format": "switch",
+                            "label": "اضف طبقة شفافة عالتصميم",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-toggle-off",
+                            "value": true,
+                            "selected": false,
+                            "required": false
+                        },
+                        {
+                            "id": "t_category.border_radius_image",
+                            "type": "number",
+                            "format": "slider",
+                            "inputType": "range",
+                            "label": "اضف حواف دائرية للتصميم",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-pin",
+                            "value": "1",
+                            "required": false,
+                            "step": "2",
+                            "minimum": "1",
+                            "maximum": "30"
+                        },
+                        {
+                            "id": "t_category.animation",
+                            "type": "items",
+                            "format": "dropdown-list",
+                            "label": "اختر الانيميشن للتصميم",
+                            "description": null,
+                            "labelHTML": null,
+                            "icon": "sicon-keyboard_arrow_down",
+                            "selected": [
+                                {
+                                    "label": "fade-up",
+                                    "value": "fade-up",
+                                    "key": "fbb9fba8-e0ce-45a6-b9f3-f0e04876f086"
+                                }
+                            ],
+                            "options": [
+                                {
+                                    "label": "slide-in-right",
+                                    "value": "slide-in-right",
+                                    "key": "981530ce-6c20-4755-aa2b-1093c45ff94e"
+                                },
+                                {
+                                    "label": "slide-in-left",
+                                    "value": "slide-in-left",
+                                    "key": "a63a5a2b-202e-4a6b-8596-a5cdc892bf3c"
+                                },
+                                {
+                                    "label": "slide-in-up",
+                                    "value": "slide-in-up",
+                                    "key": "68b1bc55-4bb3-4388-83a2-4aec6833f4e5"
+                                },
+                                {
+                                    "label": "slide-in-down",
+                                    "value": "slide-in-down",
+                                    "key": "e1c9fc34-9d92-4a8a-bbe3-1803730e786e"
+                                },
+                                {
+                                    "label": "fade-in",
+                                    "value": "fade-in",
+                                    "key": "774a746f-d458-4471-a7a3-78e78183dd9b"
+                                },
+                                {
+                                    "label": "fade-up",
+                                    "value": "fade-up",
+                                    "key": "fbb9fba8-e0ce-45a6-b9f3-f0e04876f086"
+                                },
+                                {
+                                    "label": "fade-down",
+                                    "value": "fade-down",
+                                    "key": "6160d45f-0c31-4e62-85be-59e559242544"
+                                },
+                                {
+                                    "label": "fade-left",
+                                    "value": "fade-left",
+                                    "key": "5f82b057-1327-4199-9378-5400182c6f5d"
+                                },
+                                {
+                                    "label": "fade-right",
+                                    "value": "fade-right",
+                                    "key": "64ff0b47-f1fb-46c2-b06f-9bb67655b11b"
+                                },
+                                {
+                                    "label": "scale-in",
+                                    "value": "scale-in",
+                                    "key": "dfab703a-7c8b-446f-ad1d-a4d8e0197908"
+                                },
+                                {
+                                    "label": "scale-up",
+                                    "value": "scale-up",
+                                    "key": "a41bc9ac-70c2-418e-a546-68e458827908"
+                                },
+                                {
+                                    "label": "rotate-in",
+                                    "value": "rotate-in",
+                                    "key": "6a4e64f0-42ab-4ca1-887e-2e776adc1a11"
+                                }
+                            ],
+                            "source": "Manual",
+                            "multichoice": false,
+                            "searchable": true,
+                            "required": false
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": "7"
+                }
+            ]
+        }
+    ]
 }

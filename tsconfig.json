@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "target": "ES2017",
+    "lib": ["ES2017", "DOM"],
+    "moduleResolution": "nodenext",
+    "module": "nodenext"
+  }
+}
