@@ -533,7 +533,14 @@
                     "placeholder": "e.g. https://hostname.com/image.png",
                     "icon": "sicon-image",
                     "value": "https://apqrinu-co.com/wp-content/uploads/2025/07/DSCF2844-1-scaled-1.webp",
-                    "required": false
+                    "required": false,
+                     "conditions": [
+                        {
+                            "id": "about_us_video_s",
+                            "value": true,
+                            "operation": "!="
+                        }
+                    ]
                 },
                 {
                     "id": "about_us_video_s",
@@ -561,11 +568,11 @@
                     "required": false,
                     "minLength": 6,
                     "maxLength": "500",
-                    "conditions":[
+                    "conditions": [
                         {
-                            "id":"about_us_video_s",
-                            "operation":"=",
-                            "value":true
+                            "id": "about_us_video_s",
+                            "value": true,
+                            "operation": "="
                         }
                     ]
                 },
