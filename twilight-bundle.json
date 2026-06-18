@@ -19,12 +19,17 @@
             "image": "https://apqrinu-co.com/wp-content/uploads/2025/07/1.jpg",
             "fields": [
                 {
+                    "type": "static",
+                    "format": "description",
+                    "id": "asd",
+                    "value": "<div ><h6 >معاينة المكون</h6><img class='w-full' src='https://apqrinu-co.com/wp-content/uploads/2025/07/1.jpg'></div>"
+                },
+                {
                     "id": "put_section_in_container",
                     "type": "boolean",
                     "format": "switch",
-                    "label": "وضع السيكشن داخل حاوية - container",
-                    "description": null,
-                    "labelHTML": null,
+                    "label": "إضافة العنصر داخل حاوية (Container)",
+                    "description": "تفعيل هذا الخيار لإضافة العنصر داخل حاوية محددة، مما يساعد في تنظيم التصميم وتحسين تجربة المستخدم.",
                     "icon": "sicon-toggle-off",
                     "value": true,
                     "selected": true,
