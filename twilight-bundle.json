@@ -1,13 +1,13 @@
 {
     "name": {
         "ar": "مجموعة تسوق",
-        "en": "shop bundle"
+        "en": "Shopping Collection"
     },
     "description": {
         "ar": null,
         "en": null
     },
-    "author_email": "omar-mazen@apqrinu-admin.online",
+    "author_email": "apqrinu@gmail.com",
     "support_url": "https://apqrinu-co.com/",
     "repository": "https://github.com/apqrinu/tw-shop-bundle",
     "components": [
